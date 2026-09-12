@@ -1,4 +1,4 @@
-# ikun-music-desktop change log
+# lx-music-desktop change log
 
 All notable changes to this project will be documented in this file.
 
@@ -6,7 +6,62 @@ Project versioning adheres to [Semantic Versioning](http://semver.org/).
 Commit convention is based on [Conventional Commits](http://conventionalcommits.org).
 Change log format is based on [Keep a Changelog](http://keepachangelog.com/).
 
-## [3.3.0-fix.5](https://github.com/ikunshare/ikun-music-desktop/compare/v3.3.0-fix.4...v3.3.0-fix.5) - 2026-01-13
+## [2.12.4](https://github.com/lyswhut/lx-music-desktop/compare/v2.12.3...v2.12.4) - 2026-09-12
+
+目前新项目 Any Listen 的桌面版、Web 版已实现 LX Music 的大部分功能，并额外支持 WebDAV 歌曲播放、WebDAV 数据同步、独立播放列表等功能。
+以后的开发精力将主要集中在新项目上，之前大家在 LX Music 提的功能我们也会考虑在新项目中添加。
+对于日常使用 LX Music 的人可以试试迁移到 Any Listen，若遇到任何问题可以发 issue 反馈。
+Any Listen 的项目地址为 https://github.com/any-listen/any-listen
+
+### 修复
+
+- 修复自定义主题背景图片无法显示的问题
+
+## [2.12.3](https://github.com/lyswhut/lx-music-desktop/compare/v2.12.2...v2.12.3) - 2026-09-12
+
+目前新项目 Any Listen 的桌面版、Web 版已实现 LX Music 的大部分功能，并额外支持 WebDAV 歌曲播放、WebDAV 数据同步、独立播放列表等功能。
+以后的开发精力将主要集中在新项目上，之前大家在 LX Music 提的功能我们也会考虑在新项目中添加。
+对于日常使用 LX Music 的人可以试试迁移到 Any Listen，若遇到任何问题可以发 issue 反馈。
+Any Listen 的项目地址为 https://github.com/any-listen/any-listen
+
+### 优化
+
+- 优化kw歌单列表数据显示
+- 同步服务在连接时允许URL重定向
+- Linux 点击托盘时将显示主界面（#2840）
+- 优化自动换源歌曲匹配机制
+
+### 修复
+
+- 修复 kg 搜索结果显示问题 (#2782)
+- 修复某些情况下开放 API 获取到的音量为 0 的问题 (#2790)
+- 修复 mg 图片、歌词获取
+- 修复某些 tx 歌单打开失败的问题 (#1060, @ght-000)
+- 修复在某些情况下添加、移动歌曲时可能导致保存的歌曲顺序不对的问题（#2842）
+- 修复歌词标签解析格式没有严格按照标准的问题（#2855）
+- 修复 tx 歌曲搜索失败的问题（#2848, @ikun0014）
+
+## [2.12.2](https://github.com/lyswhut/lx-music-desktop/compare/v2.12.1...v2.12.2) - 2026-05-01
+
+我们很高兴地宣布新项目 Any Listen 的桌面版已发布，目前已支持列表跟随本地文件自动更新、加载并播放WebDAV上的歌曲等功能，更多功能仍在积极开发中，桌面版与Web版将同步更新。
+对于有播放本地音乐或播放服务器上音乐需求的人可以试试，若遇到任何问题可以发 issue 反馈。
+
+### 优化
+
+- 优化歌单内歌曲搜索结果排序 (#2734)
+
+### 修复
+
+- 修复桌面歌词的 鼠标移入歌词区域时提高透明度 设置不稳定的问题（#2679, @Little100）
+- 修复某些情况下可能播放没有声音的问题（#2693）
+- 修复 tx 搜索结果显示异常的问题（#2753）
+- 修复音乐名称和歌手信息格式化问题（#2733）
+
+### 其他
+
+- 更新 Electron 到 40.8.3
+
+## [2.12.1](https://github.com/lyswhut/lx-music-desktop/compare/v2.12.0...v2.12.1) - 2026-02-16
 
 我们很高兴地宣布新项目 Any Listen 的桌面版已发布，目前已支持列表跟随本地文件自动更新、加载并播放WebDAV上的歌曲等功能，更多功能仍在积极开发中，桌面版与Web版将同步更新。
 对于有播放本地音乐或播放服务器上音乐需求的人可以试试，若遇到任何问题可以发 issue 反馈。
@@ -20,21 +75,41 @@ Change log format is based on [Keep a Changelog](http://keepachangelog.com/).
 - 修复音量条在调整音量时实际音量与显示的数值不一致的问题（#2606）
 - 修复某些情况下搜索框的搜索按钮布局错位的问题（#2622）
 
-## [3.3.0-fix.4](https://github.com/ikunshare/ikun-music-desktop/compare/v2.11.0...v3.3.0-fix.4) - 2026-01-13
+## [2.12.0](https://github.com/lyswhut/lx-music-desktop/compare/v2.11.0...v2.12.0) - 2025-11-29
 
 我们很高兴地宣布新项目 Any Listen 的桌面版已发布，目前已支持列表跟随本地文件自动更新、加载并播放WebDAV上的歌曲等功能，更多功能仍在积极开发中，桌面版与Web版将同步更新。
 对于有播放本地音乐或播放服务器上音乐需求的人可以试试，若遇到任何问题可以发 issue 反馈。
 
-### 优化
+### 新增
 
-- 优化托盘图标行为：在非 Windows 系统中，点击托盘图标时不再显示主窗口
+- 新增「设置 → 其他设置 → 主窗口使用软件内置的圆角及阴影」选项 (#2360)
+  *默认启用，关闭后将使用系统原生的窗口样式，该选项重启软件后生效*
+- 开放 API 新增播放器声音大小、静音、播放进度控制、完整歌词获取，详情看接入文档 (#2386)
+- 新增「设置 → 播放设置 → 调换歌词翻译与歌词罗马音位置」选项，默认关闭 (#2451)
+- 新增启动参数 `-hidden`，在启动时将软件最小化到系统托盘 (#2459)
+- 新增 Any Listen 歌词（用于支持已下载歌曲的歌词逐字播放）标签数据读取与播放 (#2485)
+- 新增 Any Listen 歌词（包含逐字歌词、翻译、罗马音歌词，如果有）嵌入与下载，默认启用
+- 下载列表菜单新增歌曲添加弹窗，允许将所选歌曲的在线版本添加到收藏列表 (#2537)
 
 ### 修复
 
-- 修复音量条在调整音量时实际音量与显示的数值不一致的问题（#2606）
-- 修复某些情况下搜索框的搜索按钮布局错位的问题（#2622）
+- 尝试修复进度为0时仍然显示下载完成的问题 (#2471)
+- 修复TX源搜索失败 (#2575 @Folltoshe)
+- 修复MG源歌单加载失败
+- 修复MG源评论加载失败
 
-## [2.11.0](https://github.com/lyswhut/ikun-music-desktop/compare/v2.10.0...v2.11.0) - 2025-05-01
+### 变更
+
+- 调换「歌词翻译」与「歌词罗马音」的位置，现在歌词罗马音在歌词翻译的上方展示
+  *若你想要恢复以前的行为，可以开启「调换歌词翻译与歌词罗马音位置」选项*
+- 更新代理配置规则，现在不启用代理时，图片、音频加载将不再走系统代理 (#2382 @Folltoshe)
+- 字体设置可以最多设置两种字体（[any-listen#82](https://github.com/any-listen/any-listen/issues/82)）
+
+### 其他
+
+- 更新 Electron 到 37.6.0
+
+## [2.11.0](https://github.com/lyswhut/lx-music-desktop/compare/v2.10.0...v2.11.0) - 2025-05-01
 
 ### 新增
 
@@ -69,7 +144,7 @@ Change log format is based on [Keep a Changelog](http://keepachangelog.com/).
 - 更新项目文档（@3gf8jv4dv）
 - 更新 Electron 到 35.2.2
 
-## [2.10.0](https://github.com/lyswhut/ikun-music-desktop/compare/v2.9.0...v2.10.0) - 2025-01-27
+## [2.10.0](https://github.com/lyswhut/lx-music-desktop/compare/v2.9.0...v2.10.0) - 2025-01-27
 
 落雪祝大家新年快乐！
 
@@ -85,7 +160,7 @@ Change log format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ---
 
-_感谢 @3gf8jv4dv 对 LX 系列项目翻译、文档等文案的大幅修订优化。_
+*感谢 @3gf8jv4dv 对 LX 系列项目翻译、文档等文案的大幅修订优化。*
 
 ### 不兼容性变更
 
@@ -137,7 +212,7 @@ Linux 系统至少需要 `GLIBC_2.29` 版本才能运行。
 - 修订项目协议文件（#2146, #2152, @3gf8jv4dv）
 - 更新 Electron 到 v32.3.0
 
-## [2.9.0](https://github.com/lyswhut/ikun-music-desktop/compare/v2.8.0...v2.9.0) - 2024-08-24
+## [2.9.0](https://github.com/lyswhut/lx-music-desktop/compare/v2.8.0...v2.9.0) - 2024-08-24
 
 ### 新增
 
@@ -171,10 +246,10 @@ Linux 系统至少需要 `GLIBC_2.29` 版本才能运行。
 
 - 更新 electron 到 v30.4.0
 
-## [2.8.0](https://github.com/lyswhut/ikun-music-desktop/compare/v2.7.0...v2.8.0) - 2024-06-01
+## [2.8.0](https://github.com/lyswhut/lx-music-desktop/compare/v2.7.0...v2.8.0) - 2024-06-01
 
 我们发布了关于 LX Music 项目发展调整与新项目计划的说明，
-详情看： https://github.com/lyswhut/ikun-music-desktop/issues/1912
+详情看： https://github.com/lyswhut/lx-music-desktop/issues/1912
 
 ### 新增
 
@@ -216,7 +291,7 @@ Linux 系统至少需要 `GLIBC_2.29` 版本才能运行。
 
 - 更新 electron 到 v28.3.3
 
-## [2.7.0](https://github.com/lyswhut/ikun-music-desktop/compare/v2.6.0...v2.7.0) - 2024-04-14
+## [2.7.0](https://github.com/lyswhut/lx-music-desktop/compare/v2.6.0...v2.7.0) - 2024-04-14
 
 ### 新增
 
@@ -251,7 +326,7 @@ Linux 系统至少需要 `GLIBC_2.29` 版本才能运行。
 
 - 更新 electron 到 v28.3.0
 
-## [2.6.0](https://github.com/lyswhut/ikun-music-desktop/compare/v2.5.0...v2.6.0) - 2024-02-01
+## [2.6.0](https://github.com/lyswhut/lx-music-desktop/compare/v2.5.0...v2.6.0) - 2024-02-01
 
 提交祝大家新年快乐！
 
@@ -308,7 +383,7 @@ Linux 系统至少需要 `GLIBC_2.29` 版本才能运行。
 - 自定义源不再使用`script`标签的形式执行，若要获取脚本原始代码字符串需从 `globalThis.lx.currentScriptInfo.rawScript` 属性获取
 - 自定义源新增支持`local`源的`musicUrl`、`pic`、`lyric`的获取操作详情看自定义源文档说明
 
-## [2.5.0](https://github.com/lyswhut/ikun-music-desktop/compare/v2.4.1...v2.5.0) - 2023-09-28
+## [2.5.0](https://github.com/lyswhut/lx-music-desktop/compare/v2.4.1...v2.5.0) - 2023-09-28
 
 落雪提前祝大家中秋快乐~🥮😘！
 
@@ -336,7 +411,7 @@ Linux 系统至少需要 `GLIBC_2.29` 版本才能运行。
 
 - 更新 electron 到 v25.8.3
 
-## [2.4.1](https://github.com/lyswhut/ikun-music-desktop/compare/v2.4.0...v2.4.1) - 2023-09-09
+## [2.4.1](https://github.com/lyswhut/lx-music-desktop/compare/v2.4.0...v2.4.1) - 2023-09-09
 
 目前本项目的原始发布地址只有 **GitHub** 及 **蓝奏网盘** ，其他渠道均为第三方转载发布，可信度请自行鉴别。
 本项目无微信公众号之类的官方账号，谨防被骗。
@@ -345,7 +420,7 @@ Linux 系统至少需要 `GLIBC_2.29` 版本才能运行。
 
 - 修复 v2.4.0 的默认数据库版本号不对导致首次安装该版本的用户无法再次启动软件的问题
 
-## [2.4.0](https://github.com/lyswhut/ikun-music-desktop/compare/v2.3.0...v2.4.0) - 2023-09-09
+## [2.4.0](https://github.com/lyswhut/lx-music-desktop/compare/v2.3.0...v2.4.0) - 2023-09-09
 
 目前本项目的原始发布地址只有 **GitHub** 及 **蓝奏网盘** ，其他渠道均为第三方转载发布，可信度请自行鉴别。
 本项目无微信公众号之类的官方账号，谨防被骗。
@@ -395,7 +470,7 @@ Linux 系统至少需要 `GLIBC_2.29` 版本才能运行。
 - 更新 electron 到 v22.3.23
 - 重构同步服务端功能部分代码，使其更易扩展新功能
 
-## [2.3.0](https://github.com/lyswhut/ikun-music-desktop/compare/v2.2.2...v2.3.0) - 2023-06-29
+## [2.3.0](https://github.com/lyswhut/lx-music-desktop/compare/v2.2.2...v2.3.0) - 2023-06-29
 
 ### 新增
 
@@ -426,14 +501,14 @@ Linux 系统至少需要 `GLIBC_2.29` 版本才能运行。
 
 - 更新 electron 到 v22.3.15
 
-## [2.2.2](https://github.com/lyswhut/ikun-music-desktop/compare/v2.2.1...v2.2.2) - 2023-05-01
+## [2.2.2](https://github.com/lyswhut/lx-music-desktop/compare/v2.2.1...v2.2.2) - 2023-05-01
 
 ### 修复
 
 - 修复在低版本Linux amd64系统上无法启动的问题（glibc版本要求过高导致的，采用内置预编译二进制文件的方式解决）
 - 修复添加歌曲弹窗默认列表名字显示问题
 
-## [2.2.1](https://github.com/lyswhut/ikun-music-desktop/compare/v2.2.0...v2.2.1) - 2023-05-01
+## [2.2.1](https://github.com/lyswhut/lx-music-desktop/compare/v2.2.0...v2.2.1) - 2023-05-01
 
 ### 优化
 
@@ -458,7 +533,7 @@ Linux 系统至少需要 `GLIBC_2.29` 版本才能运行。
 - 更新kg、tx、wy等平台排行榜列表
 - 更新 electron 到 v22.3.7
 
-## [2.2.0](https://github.com/lyswhut/ikun-music-desktop/compare/v2.1.2...v2.2.0) - 2023-03-26
+## [2.2.0](https://github.com/lyswhut/lx-music-desktop/compare/v2.1.2...v2.2.0) - 2023-03-26
 
 从v2.2.0起，我们发布了一个独立版的[数据同步服务](https://github.com/lyswhut/lx-music-sync-server#readme)，如果你有服务器，可以将其部署到服务器上作为私人多端同步服务使用，详情看该项目说明
 
@@ -493,20 +568,22 @@ Linux 系统至少需要 `GLIBC_2.29` 版本才能运行。
 
 - 更新 Electron 到v22.3.4
 
-## [2.1.2](https://github.com/lyswhut/ikun-music-desktop/compare/v2.1.1...v2.1.2) - 2023-02-18
+## [2.1.2](https://github.com/lyswhut/lx-music-desktop/compare/v2.1.1...v2.1.2) - 2023-02-18
+
 
 ### 修复
 
 - 修复处于最新版本时更新弹窗日志内容显示异常的问题
 - 修复更新到最新版本后的首次启动时的更新日志未显示的问题
 
-## [2.1.1](https://github.com/lyswhut/ikun-music-desktop/compare/v2.1.0...v2.1.1) - 2023-02-18
+## [2.1.1](https://github.com/lyswhut/lx-music-desktop/compare/v2.1.0...v2.1.1) - 2023-02-18
+
 
 ### 修复
 
 - 修复检查更新日志地址不正确的问题
 
-## [2.1.0](https://github.com/lyswhut/ikun-music-desktop/compare/v2.0.5...v2.1.0) - 2023-02-18
+## [2.1.0](https://github.com/lyswhut/lx-music-desktop/compare/v2.0.5...v2.1.0) - 2023-02-18
 
 由于软件内功能在设计时只考虑简单便捷性，是否对新手友好并不是我们考虑的重点，功能的新增、变更会在更新日志中注明，不会在软件内做指引提示，
 因此为了更愉快地使用本软件，我们建议在使用新版本时阅读一遍更新日志以了解软件的变更情况，同时若遇到问题可以去阅读常见问题找解决方案
@@ -542,7 +619,7 @@ Linux 系统至少需要 `GLIBC_2.29` 版本才能运行。
 
 - 更新Electron到v22.3.0
 
-## [2.0.5](https://github.com/lyswhut/ikun-music-desktop/compare/v2.0.4...v2.0.5) - 2023-01-18
+## [2.0.5](https://github.com/lyswhut/lx-music-desktop/compare/v2.0.4...v2.0.5) - 2023-01-18
 
 这应该是LX今年的最后一个版本，提前祝大家新年快乐~😘
 
@@ -553,7 +630,8 @@ Linux 系统至少需要 `GLIBC_2.29` 版本才能运行。
 - 修复随机播放模式下使用稍后播放功能播放我的列表的歌曲时，切换下一曲永远是当前歌曲的问题（#1147）
 - 修复macOS下的软件系统菜单中的退出功能不会完全退出软件的问题（#1148）
 
-## [2.0.4](https://github.com/lyswhut/ikun-music-desktop/compare/v2.0.3...v2.0.4) - 2023-01-15
+## [2.0.4](https://github.com/lyswhut/lx-music-desktop/compare/v2.0.3...v2.0.4) - 2023-01-15
+
 
 ### 修复
 
@@ -564,7 +642,8 @@ Linux 系统至少需要 `GLIBC_2.29` 版本才能运行。
 - 修复Linux armv7l系统（如树莓派）下无法启动的问题（与修复Linux arm64的方法一样采用内置预编译模块的方式修复）
 - 修复备份与恢复的列表导入列表信息设置逻辑问题与潜在导入问题
 
-## [2.0.3](https://github.com/lyswhut/ikun-music-desktop/compare/v2.0.2...v2.0.3) - 2023-01-08
+## [2.0.3](https://github.com/lyswhut/lx-music-desktop/compare/v2.0.2...v2.0.3) - 2023-01-08
+
 
 ### 修复
 
@@ -579,14 +658,14 @@ Linux 系统至少需要 `GLIBC_2.29` 版本才能运行。
 
 - 点击打开歌单弹窗背景可以关闭弹窗（#1096）
 
-## [2.0.2](https://github.com/lyswhut/ikun-music-desktop/compare/v2.0.1...v2.0.2) - 2023-01-02
+## [2.0.2](https://github.com/lyswhut/lx-music-desktop/compare/v2.0.1...v2.0.2) - 2023-01-02
 
 若你更新v2.0.0后，出现之前收藏的歌曲全部丢失或者歌曲无法添加到列表播放的问题，可以按以下方式解决：
 
 1. 根据你的平台类型，进入软件数据目录
-   - Windows：`%APPDATA%/ikun-music-desktop`
-   - Linux：`$XDG_CONFIG_HOME/ikun-music-desktop` 或 `~/.config/ikun-music-desktop`
-   - macOS：`~/Library/Application Support/ikun-music-desktop`
+   - Windows：`%APPDATA%/lx-music-desktop`
+   - Linux：`$XDG_CONFIG_HOME/lx-music-desktop` 或 `~/.config/lx-music-desktop`
+   - macOS：`~/Library/Application Support/lx-music-desktop`
 
 2. 进入`LxDatas`目录，退出LX，删除`lx.data.db`文件，再启动软件即可
 
@@ -596,14 +675,14 @@ Linux 系统至少需要 `GLIBC_2.29` 版本才能运行。
 
 - 修复无效的歌曲信息导致我的列表数据迁移失败的问题
 
-## [2.0.1](https://github.com/lyswhut/ikun-music-desktop/compare/v2.0.0...v2.0.1) - 2023-01-02
+## [2.0.1](https://github.com/lyswhut/lx-music-desktop/compare/v2.0.0...v2.0.1) - 2023-01-02
 
 若你更新v2.0.0后，出现之前收藏的歌曲全部丢失或者歌曲无法添加到列表播放的问题，可以按以下方式解决：
 
 1. 根据你的平台类型，进入软件数据目录
-   - Windows：`%APPDATA%/ikun-music-desktop`
-   - Linux：`$XDG_CONFIG_HOME/ikun-music-desktop` 或 `~/.config/ikun-music-desktop`
-   - macOS：`~/Library/Application Support/ikun-music-desktop`
+   - Windows：`%APPDATA%/lx-music-desktop`
+   - Linux：`$XDG_CONFIG_HOME/lx-music-desktop` 或 `~/.config/lx-music-desktop`
+   - macOS：`~/Library/Application Support/lx-music-desktop`
 
 2. 进入`LxDatas`目录，退出LX，删除`lx.data.db`文件，再启动软件即可
 
@@ -613,7 +692,8 @@ Linux 系统至少需要 `GLIBC_2.29` 版本才能运行。
 
 - 单次执行所有sql语句，尝试解决某些情况下某些表没有成功创建的问题
 
-## [2.0.0](https://github.com/lyswhut/ikun-music-desktop/compare/v1.22.3...v2.0.0) - 2023-01-01
+## [2.0.0](https://github.com/lyswhut/lx-music-desktop/compare/v1.22.3...v2.0.0) - 2023-01-01
+
 
 ### 不兼容性变更说明
 
@@ -674,13 +754,13 @@ Linux 系统至少需要 `GLIBC_2.29` 版本才能运行。
 
 - 更新Electron到v19.1.9
 
-## [1.22.3](https://github.com/lyswhut/ikun-music-desktop/compare/v1.22.2...v1.22.3) - 2022-09-03
+## [1.22.3](https://github.com/lyswhut/lx-music-desktop/compare/v1.22.2...v1.22.3) - 2022-09-03
 
 ### 修复
 
 - 修复因音源的域名到期导致的音源失效的问题
 
-## [1.22.2](https://github.com/lyswhut/ikun-music-desktop/compare/v1.22.1...v1.22.2) - 2022-08-18
+## [1.22.2](https://github.com/lyswhut/lx-music-desktop/compare/v1.22.1...v1.22.2) - 2022-08-18
 
 ### 优化
 
@@ -696,7 +776,7 @@ Linux 系统至少需要 `GLIBC_2.29` 版本才能运行。
 
 - 降级electron到v15.5.7
 
-## [1.22.1](https://github.com/lyswhut/ikun-music-desktop/compare/v1.22.0...v1.22.1) - 2022-07-09
+## [1.22.1](https://github.com/lyswhut/lx-music-desktop/compare/v1.22.0...v1.22.1) - 2022-07-09
 
 ### 优化
 
@@ -712,7 +792,7 @@ Linux 系统至少需要 `GLIBC_2.29` 版本才能运行。
 
 - 升级Electron到 v17.4.10
 
-## [1.22.0](https://github.com/lyswhut/ikun-music-desktop/compare/v1.21.0...v1.22.0) - 2022-06-19
+## [1.22.0](https://github.com/lyswhut/lx-music-desktop/compare/v1.21.0...v1.22.0) - 2022-06-19
 
 ### 新增
 
@@ -741,7 +821,7 @@ Linux 系统至少需要 `GLIBC_2.29` 版本才能运行。
 
 - 更新 Electron 到 v17.4.7
 
-## [1.21.0](https://github.com/lyswhut/ikun-music-desktop/compare/v1.20.0...v1.21.0) - 2022-05-22
+## [1.21.0](https://github.com/lyswhut/lx-music-desktop/compare/v1.20.0...v1.21.0) - 2022-05-22
 
 ### 新增
 
@@ -767,7 +847,7 @@ Linux 系统至少需要 `GLIBC_2.29` 版本才能运行。
 - 将歌曲添加“稍后播放”后，它们会被放在一个优先级最高的特殊队列中，点击“下一曲”时会消耗该队列中的歌曲，并且无法通过“上一曲”功能播放该队列的上一首歌曲
 - 在切歌时若不是通过“上一曲”、“下一曲”功能切歌（例如直接点击“排行榜列表”、“我的列表”中的歌曲切歌），“稍后播放”队列将会被清空
 
-## [1.20.0](https://github.com/lyswhut/ikun-music-desktop/compare/v1.19.0...v1.20.0) - 2022-04-17
+## [1.20.0](https://github.com/lyswhut/lx-music-desktop/compare/v1.19.0...v1.20.0) - 2022-04-17
 
 特别说明：Scheme URL其实是支持Linux系统的，但好像需要deb之类的安装包创建出`.desktop`文件才行。
 
@@ -806,7 +886,7 @@ Linux 系统至少需要 `GLIBC_2.29` 版本才能运行。
 - 移除设置-播放详情页设置-歌词字体重置，此设置项已迁移到播放详情页的歌词菜单中
 - 移除播放详情页使用+-快捷键调整字体大小的功能，改用歌词右键菜单的字体大小调整功能
 
-## [1.19.0](https://github.com/lyswhut/ikun-music-desktop/compare/v1.18.0...v1.19.0) - 2022-03-20
+## [1.19.0](https://github.com/lyswhut/lx-music-desktop/compare/v1.18.0...v1.19.0) - 2022-03-20
 
 ### 新增
 
@@ -853,7 +933,7 @@ Linux 系统至少需要 `GLIBC_2.29` 版本才能运行。
 - 编辑列表名时按Esc键可以取消编辑
 - 按F11可以进入、退出全屏状态
 
-## [1.18.0](https://github.com/lyswhut/ikun-music-desktop/compare/v1.17.1...v1.18.0) - 2022-02-26
+## [1.18.0](https://github.com/lyswhut/lx-music-desktop/compare/v1.17.1...v1.18.0) - 2022-02-26
 
 ### 新增
 
@@ -878,14 +958,14 @@ Linux 系统至少需要 `GLIBC_2.29` 版本才能运行。
 - 修复wy源某些歌曲获取歌词翻译的问题处理
 - 修复下载功能的歌词换源时会进入死循环的问题
 - 修复某些歌曲无法下载的问题
-- 修复windows平台下软件目录存在`portable`文件夹时，仍会创建`C:\Users\<user>\AppData\Roaming\ikun-music-desktop\Dictionaries\en-US-9-0.bdic`文件的问题，现在不会再创建文件，但仍会创建空目录（Electron的问题，目前暂无解决方法）
+- 修复windows平台下软件目录存在`portable`文件夹时，仍会创建`C:\Users\<user>\AppData\Roaming\lx-music-desktop\Dictionaries\en-US-9-0.bdic`文件的问题，现在不会再创建文件，但仍会创建空目录（Electron的问题，目前暂无解决方法）
 - 修复播放器的停止逻辑问题
 
 ### 其他
 
 - 更新electron到v13.6.9
 
-## [1.17.1](https://github.com/lyswhut/ikun-music-desktop/compare/v1.17.0...v1.17.1) - 2022-01-28
+## [1.17.1](https://github.com/lyswhut/lx-music-desktop/compare/v1.17.0...v1.17.1) - 2022-01-28
 
 ### 优化
 
@@ -900,7 +980,7 @@ Linux 系统至少需要 `GLIBC_2.29` 版本才能运行。
 
 - 更新electron到v13.6.8
 
-## [1.17.0](https://github.com/lyswhut/ikun-music-desktop/compare/v1.16.0...v1.17.0) - 2022-01-22
+## [1.17.0](https://github.com/lyswhut/lx-music-desktop/compare/v1.16.0...v1.17.0) - 2022-01-22
 
 ### 新增
 
@@ -926,7 +1006,7 @@ Linux 系统至少需要 `GLIBC_2.29` 版本才能运行。
 
 - 更新 Electron 到 v13.6.7
 
-## [1.16.0](https://github.com/lyswhut/ikun-music-desktop/compare/v1.15.3...v1.16.0) - 2022-01-01
+## [1.16.0](https://github.com/lyswhut/lx-music-desktop/compare/v1.15.3...v1.16.0) - 2022-01-01
 
 这算是一个大版本，对主窗口部分的代码逻辑做了较大改动，但由于界面的改动不大，所以没有更新大版本号。
 虽然经过一个月的测试与问题修复，但可能仍然存在未发现的问题，若你发现某些界面异常、某些行为与旧版本存在差异等问题，欢迎反馈！
@@ -969,7 +1049,7 @@ Linux 系统至少需要 `GLIBC_2.29` 版本才能运行。
 
 - 升级vue到 3.x
 
-## [1.15.3](https://github.com/lyswhut/ikun-music-desktop/compare/v1.15.2...v1.15.3) - 2021-11-21
+## [1.15.3](https://github.com/lyswhut/lx-music-desktop/compare/v1.15.2...v1.15.3) - 2021-11-21
 
 ### 修复
 
@@ -978,13 +1058,13 @@ Linux 系统至少需要 `GLIBC_2.29` 版本才能运行。
 - 修复潜在的音乐加载超时不会切歌的问题
 - 修复因kw源歌词接口停用导致该源歌词获取失败的问题
 
-## [1.15.2](https://github.com/lyswhut/ikun-music-desktop/compare/v1.15.3...v1.15.2) - 2021-11-09
+## [1.15.2](https://github.com/lyswhut/lx-music-desktop/compare/v1.15.3...v1.15.2) - 2021-11-09
 
 ### 其他
 
 - 降级electron到v13.4.0（这修复了windows 7下播放歌曲时软件会崩溃的问题）
 
-## [1.15.1](https://github.com/lyswhut/ikun-music-desktop/compare/v1.15.0...v1.15.1) - 2021-11-09
+## [1.15.1](https://github.com/lyswhut/lx-music-desktop/compare/v1.15.0...v1.15.1) - 2021-11-09
 
 ### 优化
 
@@ -1003,7 +1083,7 @@ Linux 系统至少需要 `GLIBC_2.29` 版本才能运行。
 
 - 更新electron到v15.3.1（这修复了媒体控制失效的问题）
 
-## [1.15.0](https://github.com/lyswhut/ikun-music-desktop/compare/v1.14.1...v1.15.0) - 2021-10-29
+## [1.15.0](https://github.com/lyswhut/lx-music-desktop/compare/v1.14.1...v1.15.0) - 2021-10-29
 
 ### 新增
 
@@ -1028,14 +1108,14 @@ Linux 系统至少需要 `GLIBC_2.29` 版本才能运行。
 
 - 更新 Electron 到 v15.3.0
 
-## [1.14.1](https://github.com/lyswhut/ikun-music-desktop/compare/v1.14.0...v1.14.1) - 2021-10-04
+## [1.14.1](https://github.com/lyswhut/lx-music-desktop/compare/v1.14.0...v1.14.1) - 2021-10-04
 
 ### 修复
 
 - 修复我的列表搜索无法搜索小括号、中括号等字符的问题
 - 修复v1.14.0出现的备份与恢复功能备份的数据无法恢复的问题，同时兼容使用v1.14.0导出的存在问题的数据
 
-## [1.14.0](https://github.com/lyswhut/ikun-music-desktop/compare/v1.13.0...v1.14.0) - 2021-10-02
+## [1.14.0](https://github.com/lyswhut/lx-music-desktop/compare/v1.13.0...v1.14.0) - 2021-10-02
 
 ### 新增
 
@@ -1053,7 +1133,7 @@ Linux 系统至少需要 `GLIBC_2.29` 版本才能运行。
 - 修复下载歌曲时的歌词下载不尝试获取缓存歌词的问题
 - 修复GNOME等桌面下每次打开应用时需重新设置歌词窗口置顶的问题
 
-## [1.13.0](https://github.com/lyswhut/ikun-music-desktop/compare/v1.12.2...v1.13.0) - 2021-09-05
+## [1.13.0](https://github.com/lyswhut/lx-music-desktop/compare/v1.12.2...v1.13.0) - 2021-09-05
 
 如果你喜欢并经常使用洛雪音乐，并想要第一时间尝鲜洛雪的新功能，可以加入测试企鹅群768786588，
 注意：测试版的功可能会不稳定，打算潜水的勿加。
@@ -1074,7 +1154,7 @@ Linux 系统至少需要 `GLIBC_2.29` 版本才能运行。
 - 修复某些情况下同步功能会导致切歌混乱的问题
 - 修复从电脑浏览器复制的企鹅歌单链接无法打开的问题
 
-## [1.12.2](https://github.com/lyswhut/ikun-music-desktop/compare/v1.12.1...v1.12.2) - 2021-08-11
+## [1.12.2](https://github.com/lyswhut/lx-music-desktop/compare/v1.12.1...v1.12.2) - 2021-08-11
 
 ### 修复
 
@@ -1083,13 +1163,13 @@ Linux 系统至少需要 `GLIBC_2.29` 版本才能运行。
 - 修复下载列表稍后播放功能无效的问题
 - 修复同步服务器启动失败时，关闭同步服务不会清空失败信息的问题
 
-## [1.12.1](https://github.com/lyswhut/ikun-music-desktop/compare/v1.12.0...v1.12.1) - 2021-08-08
+## [1.12.1](https://github.com/lyswhut/lx-music-desktop/compare/v1.12.0...v1.12.1) - 2021-08-08
 
 ### 修复
 
 - 修复随机播放下无法切歌的问题
 
-## [1.12.0](https://github.com/lyswhut/ikun-music-desktop/compare/v1.11.0...v1.12.0) - 2021-08-08
+## [1.12.0](https://github.com/lyswhut/lx-music-desktop/compare/v1.11.0...v1.12.0) - 2021-08-08
 
 ### 新增
 
@@ -1104,7 +1184,7 @@ Linux 系统至少需要 `GLIBC_2.29` 版本才能运行。
 - 修复导入kg歌单最多只能加载100、500首歌曲的问题。注：现在可以加载1000+首歌曲的歌单，但出于未知原因会导致部分歌曲无法加载（可能是无版权导致的），目前酷狗码仍然最多只能加载500首歌
 - 修复某些情况下所显示的歌词、封面图片与当前正在播放的歌曲不一致的问题
 
-## [1.11.0](https://github.com/lyswhut/ikun-music-desktop/compare/v1.10.2...v1.11.0) - 2021-07-18
+## [1.11.0](https://github.com/lyswhut/lx-music-desktop/compare/v1.10.2...v1.11.0) - 2021-07-18
 
 ### 新增
 
@@ -1127,26 +1207,26 @@ Linux 系统至少需要 `GLIBC_2.29` 版本才能运行。
 ### 变更
 
 - 添加歌曲到列表时从原来的底部改为顶部，若你想要将你的列表歌曲顺序反转以适应这一变更，可先按住`shift`键的情况下点击列表的最后一首歌，然后再点击列表的第一首歌，完成倒序选中，最后随便右击列表的任意一首歌，在弹出的菜单中选择调整顺序，在弹出框输入1后确定即可反转列表。
-  若你想要恢复原来的行为则可以去更改“添加歌曲到列表时的位置”设置项。
+若你想要恢复原来的行为则可以去更改“添加歌曲到列表时的位置”设置项。
 
 ### 其他
 
 - 更新electron到v13.1.7
 
-## [1.10.2](https://github.com/lyswhut/ikun-music-desktop/compare/v1.10.1...v1.10.2) - 2021-05-25
+## [1.10.2](https://github.com/lyswhut/lx-music-desktop/compare/v1.10.1...v1.10.2) - 2021-05-25
 
 ### 修复
 
 - 修复企鹅音乐搜索歌曲没有结果的问题
 
-## [1.10.1](https://github.com/lyswhut/ikun-music-desktop/compare/v1.10.0...v1.10.1) - 2021-05-25
+## [1.10.1](https://github.com/lyswhut/lx-music-desktop/compare/v1.10.0...v1.10.1) - 2021-05-25
 
 ### 修复
 
 - 修复企鹅音乐搜索歌曲没有结果的问题
 - 修复播放在空的歌单列表点击播放全部时报错的问题
 
-## [1.10.0](https://github.com/lyswhut/ikun-music-desktop/compare/v1.9.0...v1.10.0) - 2021-05-19
+## [1.10.0](https://github.com/lyswhut/lx-music-desktop/compare/v1.9.0...v1.10.0) - 2021-05-19
 
 lx music移动端已经发布了，使用习惯仍跟桌面版一样，不过功能、界面仍比较简单，有兴趣的可以去体检一下，项目地址：
 https://github.com/lyswhut/lx-music-mobile#readme
@@ -1170,7 +1250,7 @@ https://github.com/lyswhut/lx-music-mobile#readme
 
 - 更新 Electron 到 12.0.8
 
-## [1.9.0](https://github.com/lyswhut/ikun-music-desktop/compare/v1.8.2...v1.9.0) - 2021-04-24
+## [1.9.0](https://github.com/lyswhut/lx-music-desktop/compare/v1.8.2...v1.9.0) - 2021-04-24
 
 ### 新增
 
@@ -1193,20 +1273,20 @@ https://github.com/lyswhut/lx-music-mobile#readme
 - 修正设置页“搜索设置”部分内容的缩进显示问题
 - 修复正在播放“稍后播放”的歌曲时，对“稍后播放”前播放的列表进行添加、删除操作会导致切歌的问题
 
-## [1.8.2](https://github.com/lyswhut/ikun-music-desktop/compare/v1.8.1...v1.8.2) - 2021-03-09
+## [1.8.2](https://github.com/lyswhut/lx-music-desktop/compare/v1.8.1...v1.8.2) - 2021-03-09
 
 ### 修复
 
 - 修复歌曲ID存储变更导致酷狗图片获取失败的问题
 - 修复收藏的在线列表id迁移保存出错的问题
 
-## [1.8.1](https://github.com/lyswhut/ikun-music-desktop/compare/v1.8.0...v1.8.1) - 2021-03-07
+## [1.8.1](https://github.com/lyswhut/lx-music-desktop/compare/v1.8.0...v1.8.1) - 2021-03-07
 
 ### 修复
 
 - 修复歌词翻译的主题颜色适配问题
 
-## [1.8.0](https://github.com/lyswhut/ikun-music-desktop/compare/v1.7.1...v1.8.0) - 2021-03-07
+## [1.8.0](https://github.com/lyswhut/lx-music-desktop/compare/v1.7.1...v1.8.0) - 2021-03-07
 
 ### 新增
 
@@ -1243,14 +1323,14 @@ https://github.com/lyswhut/lx-music-mobile#readme
 
 - 更新electron到v9.4.4
 
-## [1.7.1](https://github.com/lyswhut/ikun-music-desktop/compare/v1.7.0...v1.7.1) - 2021-01-30
+## [1.7.1](https://github.com/lyswhut/lx-music-desktop/compare/v1.7.0...v1.7.1) - 2021-01-30
 
 ### 修复
 
 - 修复非透明模式下右侧滚动条无法拖动的问题
 - 修复MAC下xm音乐滑块验证问题
 
-## [1.7.0](https://github.com/lyswhut/ikun-music-desktop/compare/v1.6.1...v1.7.0) - 2021-01-30
+## [1.7.0](https://github.com/lyswhut/lx-music-desktop/compare/v1.6.1...v1.7.0) - 2021-01-30
 
 ### 新增
 
@@ -1273,7 +1353,7 @@ https://github.com/lyswhut/lx-music-mobile#readme
 
 - 更新electron到9.4.2
 
-## [1.6.1](https://github.com/lyswhut/ikun-music-desktop/compare/v1.6.0...v1.6.1) - 2021-01-13
+## [1.6.1](https://github.com/lyswhut/lx-music-desktop/compare/v1.6.0...v1.6.1) - 2021-01-13
 
 ### 优化
 
@@ -1285,7 +1365,7 @@ https://github.com/lyswhut/lx-music-mobile#readme
 - 修复自动换源导致的搜索列表每页变成10条数据的问题
 - 降级electron到9.3.3修复部分系统没有声音的问题
 
-## [1.6.0](https://github.com/lyswhut/ikun-music-desktop/compare/v1.5.0...v1.6.0) - 2021-01-10
+## [1.6.0](https://github.com/lyswhut/lx-music-desktop/compare/v1.5.0...v1.6.0) - 2021-01-10
 
 ### 新增
 
@@ -1308,7 +1388,7 @@ https://github.com/lyswhut/lx-music-mobile#readme
 - 修复音乐嵌入的封面在 Mac 系统无法显示的问题
 - 修复`-dt`（原来的`-nt`）启动参数不真正生效的问题
 
-## [1.5.0](https://github.com/lyswhut/ikun-music-desktop/compare/v1.4.1...v1.5.0) - 2020-12-13
+## [1.5.0](https://github.com/lyswhut/lx-music-desktop/compare/v1.4.1...v1.5.0) - 2020-12-13
 
 ### 新增
 
@@ -1325,7 +1405,8 @@ https://github.com/lyswhut/lx-music-mobile#readme
 - 修复酷狗源的某些歌曲没有专辑字段导致的列表加载失败问题
 - 修复某些酷狗源歌单链接无法打开的问题
 
-## [1.4.1](https://github.com/lyswhut/ikun-music-desktop/compare/v1.4.0...v1.4.1) - 2020-11-25
+## [1.4.1](https://github.com/lyswhut/lx-music-desktop/compare/v1.4.0...v1.4.1) - 2020-11-25
+
 
 ### 修复
 
@@ -1333,7 +1414,7 @@ https://github.com/lyswhut/lx-music-mobile#readme
 - 修复歌曲URL过期时，等待刷新URL的自动切换歌曲时间间隔太短的问题
 - 修复某些电脑上的某些歌曲没有声音的问题（升级Electron9.3.4导致的，现降级到9.3.3）
 
-## [1.4.0](https://github.com/lyswhut/ikun-music-desktop/compare/v1.3.0...v1.4.0) - 2020-11-21
+## [1.4.0](https://github.com/lyswhut/lx-music-desktop/compare/v1.3.0...v1.4.0) - 2020-11-21
 
 ### 新增
 
@@ -1351,7 +1432,7 @@ https://github.com/lyswhut/lx-music-mobile#readme
 - 修复移动单首歌曲时，如果目标列表存在该歌曲，会导致将源列表与目标列表里的目标歌曲移除
 - 修复kg源歌曲信息带有单引号等特殊字符被转义的问题
 
-## [1.3.0](https://github.com/lyswhut/ikun-music-desktop/compare/v1.2.2...v1.3.0) - 2020-11-01
+## [1.3.0](https://github.com/lyswhut/lx-music-desktop/compare/v1.2.2...v1.3.0) - 2020-11-01
 
 ### 新增
 
@@ -1365,13 +1446,13 @@ https://github.com/lyswhut/lx-music-mobile#readme
 
 - 修复小芸源音乐搜索结果最多只有20条搜索结果的问题
 
-## [1.2.2](https://github.com/lyswhut/ikun-music-desktop/compare/v1.2.1...v1.2.2) - 2020-10-18
+## [1.2.2](https://github.com/lyswhut/lx-music-desktop/compare/v1.2.1...v1.2.2) - 2020-10-18
 
 ### 修复
 
 - 降级 Electron 到 9.x.x 版本修复 Linux 版桌面歌词窗口变白的问题
 
-## [1.2.1](https://github.com/lyswhut/ikun-music-desktop/compare/v1.2.0...v1.2.1) - 2020-10-18
+## [1.2.1](https://github.com/lyswhut/lx-music-desktop/compare/v1.2.0...v1.2.1) - 2020-10-18
 
 ### 优化
 
@@ -1382,7 +1463,7 @@ https://github.com/lyswhut/lx-music-mobile#readme
 - 修复聚合搜索的分页问题
 - 修复代理输入框输入的内容不生效的问题
 
-## [1.2.0](https://github.com/lyswhut/ikun-music-desktop/compare/v1.1.1...v1.2.0) - 2020-09-30
+## [1.2.0](https://github.com/lyswhut/lx-music-desktop/compare/v1.1.1...v1.2.0) - 2020-09-30
 
 提前祝大家中秋&国庆快乐~
 
@@ -1410,22 +1491,22 @@ https://github.com/lyswhut/lx-music-mobile#readme
 
 - 更新 Electron 到 v10.1.3
 
-## [1.1.1](https://github.com/lyswhut/ikun-music-desktop/compare/v1.1.0...v1.1.1) - 2020-09-19
+## [1.1.1](https://github.com/lyswhut/lx-music-desktop/compare/v1.1.0...v1.1.1) - 2020-09-19
 
 ### 修复
 
 - 修复某些情况下桌面歌词不会播放的问题
 
-## [1.1.0](https://github.com/lyswhut/ikun-music-desktop/compare/v1.0.1...v1.1.0) - 2020-09-18
+## [1.1.0](https://github.com/lyswhut/lx-music-desktop/compare/v1.0.1...v1.1.0) - 2020-09-18
 
 ### 新增
 
 - 在歌单详情界面新增播放当前歌单按钮、收藏歌单按钮，注：播放歌单不会将歌曲添加到试听列表
 - 新增`不允许将歌词窗口拖出主屏幕之外`的设置项，默认开启，在连接多个屏幕时想要拖动到其他屏幕时可关闭此设置
-- 新增大部分平台的歌词翻译，感谢 @InoriHimea 提供的[krc解码算法](https://github.com/lyswhut/ikun-music-desktop/issues/296#issuecomment-683285784)
+- 新增大部分平台的歌词翻译，感谢 @InoriHimea 提供的[krc解码算法](https://github.com/lyswhut/lx-music-desktop/issues/296#issuecomment-683285784)
 - 新增`显示歌词翻译`设置，默认开启，仅支持某些平台，注：无论该设置是否开启，嵌入或下载歌词时都不会带上翻译
 - 新增`显示切换动画`设置，默认开启，关闭时将基本禁用软件内的所有切换动画
-- 播放状态栏新增桌面歌词的开关、播放模式的切换、歌曲的收藏按钮，Thanks to @andylow for the [icon](https://github.com/lyswhut/ikun-music-desktop/pull/309)!
+- 播放状态栏新增桌面歌词的开关、播放模式的切换、歌曲的收藏按钮，Thanks to @andylow for the [icon](https://github.com/lyswhut/lx-music-desktop/pull/309)!
 
 ### 修复
 
@@ -1449,7 +1530,7 @@ https://github.com/lyswhut/lx-music-mobile#readme
 
 - 更新electron到 10.1.2
 
-## [1.0.1](https://github.com/lyswhut/ikun-music-desktop/compare/v1.0.0...v1.0.1) - 2020-07-25
+## [1.0.1](https://github.com/lyswhut/lx-music-desktop/compare/v1.0.0...v1.0.1) - 2020-07-25
 
 ### 优化
 
@@ -1459,7 +1540,7 @@ https://github.com/lyswhut/lx-music-mobile#readme
 
 - 修复在 Windows 系统下缩放比非100%时，拖动桌面歌词会自动加大桌面歌词窗口的问题
 
-## [1.0.0](https://github.com/lyswhut/ikun-music-desktop/compare/v0.18.2...v1.0.0) - 2020-07-24
+## [1.0.0](https://github.com/lyswhut/lx-music-desktop/compare/v0.18.2...v1.0.0) - 2020-07-24
 
 ### 新增
 
@@ -1480,7 +1561,7 @@ https://github.com/lyswhut/lx-music-mobile#readme
 - 新增托盘图标样式设置，可到设置-其他切换
 - 新增开关下载功能控制，默认关闭，可到设置-下载设置开启
 - 新增将歌词嵌入音频文件中，默认关闭，可到设置-下载设置开启
-- 新增当列表文件损坏时对损坏文件的备份，若出现该情况可打开`%HOMEPATH%\AppData\Roaming\ikun-music-desktop`找到`playList.json.bak`尝试手动修复列表文件，列表文件以`JSON`格式存储
+- 新增当列表文件损坏时对损坏文件的备份，若出现该情况可打开`%HOMEPATH%\AppData\Roaming\lx-music-desktop`找到`playList.json.bak`尝试手动修复列表文件，列表文件以`JSON`格式存储
 - 新增在歌单详情列表按退格（Backspace）键可快速返回歌单列表
 
 ### 优化
@@ -1518,13 +1599,13 @@ https://github.com/lyswhut/lx-music-mobile#readme
 
 - 更新 Electron 到 9.1.1
 
-## [0.18.2](https://github.com/lyswhut/ikun-music-desktop/compare/v0.18.1...v0.18.2) - 2020-05-02
+## [0.18.2](https://github.com/lyswhut/lx-music-desktop/compare/v0.18.1...v0.18.2) - 2020-05-02
 
 ### 修复
 
 - 修复开启托盘时，可能导致无法自动更新的问题
 
-## [0.18.1](https://github.com/lyswhut/ikun-music-desktop/compare/v0.18.0...v0.18.1) - 2020-05-02
+## [0.18.1](https://github.com/lyswhut/lx-music-desktop/compare/v0.18.0...v0.18.1) - 2020-05-02
 
 ### 优化
 
@@ -1535,7 +1616,7 @@ https://github.com/lyswhut/lx-music-mobile#readme
 
 - 修复导入设置某些设置未立即生效的问题
 
-## [0.18.0](https://github.com/lyswhut/ikun-music-desktop/compare/v0.17.0...v0.18.0) - 2020-05-01
+## [0.18.0](https://github.com/lyswhut/lx-music-desktop/compare/v0.17.0...v0.18.0) - 2020-05-01
 
 ### 新增
 
@@ -1579,13 +1660,14 @@ https://github.com/lyswhut/lx-music-mobile#readme
 
 更新 Electron 到 8.2.5
 
-## [0.17.0](https://github.com/lyswhut/ikun-music-desktop/compare/v0.16.0...v0.17.0) - 2020-03-15
+
+## [0.17.0](https://github.com/lyswhut/lx-music-desktop/compare/v0.16.0...v0.17.0) - 2020-03-15
 
 ### 新增
 
 - 新增多语言设置，目前软件内置了简体中文、繁体中文、英语三种语言，欢迎提交PR翻译更多语言！
 - 新增无法打开外部歌单FAQ
-- 新增启动参数`search`，使用例子：`.\ikun-music-desktop.exe -search="突然的自我 - 伍佰"`
+- 新增启动参数`search`，使用例子：`.\lx-music-desktop.exe -search="突然的自我 - 伍佰"`
 - 新增音频输出设置
 - 新增软件内的包括字体在内的界面内容大小调整，现在当窗口大小切换到“较小/大/较大”时，软件内的元素将会适当减小或加大，窗口大小的“小”与“中”内的元素将保持之前的大小暂不做改变
 - 新增音源别名，默认将显示别名，想要显示回原名可到设置切换（免责声明：别名仅是本软件用于描述各音源的标签，其名字归版权方所有）
@@ -1612,7 +1694,7 @@ https://github.com/lyswhut/lx-music-mobile#readme
 
 - 更新Electron到 8.1.1
 
-## [0.16.0](https://github.com/lyswhut/ikun-music-desktop/compare/v0.15.0...v0.16.0) - 2020-02-16
+## [0.16.0](https://github.com/lyswhut/lx-music-desktop/compare/v0.15.0...v0.16.0) - 2020-02-16
 
 ### 新增
 
@@ -1640,7 +1722,7 @@ https://github.com/lyswhut/lx-music-mobile#readme
 
 - 更新electron到 8.0.1
 
-## [0.15.0](https://github.com/lyswhut/ikun-music-desktop/compare/v0.14.1...v0.15.0) - 2020-01-23
+## [0.15.0](https://github.com/lyswhut/lx-music-desktop/compare/v0.14.1...v0.15.0) - 2020-01-23
 
 洛雪提前祝大家新年快乐、身体健康、阖家幸福！
 
@@ -1651,7 +1733,7 @@ https://github.com/lyswhut/lx-music-mobile#readme
 - 修复某些情况下歌曲下载错误的问题
 - 修复下载列表数据没有被迁移直接被丢弃的问题
 
-## [0.14.1](https://github.com/lyswhut/ikun-music-desktop/compare/v0.14.0...v0.14.1) - 2020-01-22
+## [0.14.1](https://github.com/lyswhut/lx-music-desktop/compare/v0.14.0...v0.14.1) - 2020-01-22
 
 洛雪提前祝大家新年快乐、身体健康、阖家幸福！
 
@@ -1659,7 +1741,7 @@ https://github.com/lyswhut/lx-music-mobile#readme
 
 - 修复由于旧版配置文件迁移出错导致的软件界面无法显示的问题
 
-## [0.14.0](https://github.com/lyswhut/ikun-music-desktop/compare/v0.13.1...v0.14.0) - 2020-01-22
+## [0.14.0](https://github.com/lyswhut/lx-music-desktop/compare/v0.13.1...v0.14.0) - 2020-01-22
 
 洛雪提前祝大家新年快乐、身体健康、阖家幸福！
 
@@ -1667,7 +1749,7 @@ https://github.com/lyswhut/lx-music-mobile#readme
 
 - 新增各大平台歌单热门标签显示（显示在歌单界面的第一个下拉标签菜单中）
 - 恢复QQ音乐源128k音质试听
-- 新增不强制win7开启透明效果即可使用，但要配置运行参数`-nt`，例如：`.\ikun-music-desktop.exe -nt`，添加方法可自行百度“给快捷方式加参数”
+- 新增不强制win7开启透明效果即可使用，但要配置运行参数`-nt`，例如：`.\lx-music-desktop.exe -nt`，添加方法可自行百度“给快捷方式加参数”
 - 新增“新年快乐”主题，可自行切换体验
 
 ### 优化
@@ -1688,7 +1770,7 @@ https://github.com/lyswhut/lx-music-mobile#readme
 - 将软件设置与播放列表分离存储成两个文件
 - 更新 Electron 到 7.1.9
 
-## [0.13.1](https://github.com/lyswhut/ikun-music-desktop/compare/v0.13.0...v0.13.1) - 2019-12-16
+## [0.13.1](https://github.com/lyswhut/lx-music-desktop/compare/v0.13.0...v0.13.1) - 2019-12-16
 
 ### 修复
 
@@ -1698,7 +1780,7 @@ https://github.com/lyswhut/lx-music-mobile#readme
 
 - 由于electron 7.1.3 - 7.1.5 的自动更新功能存在Bug，现降级到7.1.2
 
-## [0.13.0](https://github.com/lyswhut/ikun-music-desktop/compare/v0.12.1...v0.13.0) - 2019-12-15
+## [0.13.0](https://github.com/lyswhut/lx-music-desktop/compare/v0.12.1...v0.13.0) - 2019-12-15
 
 ### 新增
 
@@ -1724,7 +1806,7 @@ https://github.com/lyswhut/lx-music-mobile#readme
 - 更新electron到7.1.5
 - 更新vue到2.6.11
 
-## [0.12.1](https://github.com/lyswhut/ikun-music-desktop/compare/v0.12.0...v0.12.1) - 2019-12-01
+## [0.12.1](https://github.com/lyswhut/lx-music-desktop/compare/v0.12.0...v0.12.1) - 2019-12-01
 
 ### 优化
 
@@ -1741,7 +1823,7 @@ https://github.com/lyswhut/lx-music-mobile#readme
 
 - 更新electron到7.1.2
 
-## [0.12.0](https://github.com/lyswhut/ikun-music-desktop/compare/v0.11.0...v0.12.0) - 2019-11-17
+## [0.12.0](https://github.com/lyswhut/lx-music-desktop/compare/v0.11.0...v0.12.0) - 2019-11-17
 
 由于新下载库仍然没有完成，但下载功能已经可用，so 移除之前使用的第三方下载库，暂时把新下载库的下载模块直接加入本程序，若出现下载问题欢迎反馈！
 
@@ -1761,7 +1843,7 @@ https://github.com/lyswhut/lx-music-mobile#readme
 - 修复歌曲封面下载失败时仍然执行嵌入封面操作导致报错的问题
 - 跳过重复添加**相同歌曲名与扩展名的歌曲**，例如你之前下载了A歌曲的128k音质，现在想要下载它的320k音质，但由于两者都是MP3格式，会因为重名导致之前的128k音质被覆盖但列表中仍然显示两种音质的问题（但实际上都是指向后面的320k音质）
 
-## [0.11.0](https://github.com/lyswhut/ikun-music-desktop/compare/v0.10.0...v0.11.0) - 2019-11-10
+## [0.11.0](https://github.com/lyswhut/lx-music-desktop/compare/v0.10.0...v0.11.0) - 2019-11-10
 
 ### 新增
 
@@ -1773,7 +1855,7 @@ https://github.com/lyswhut/lx-music-mobile#readme
 
 - 优化更新弹窗机制及其内容描述，对于可以自动更新的版本，现在可以看到软件的下载进度了
 
-## [0.10.0](https://github.com/lyswhut/ikun-music-desktop/compare/v0.9.1...v0.10.0) - 2019-11-02
+## [0.10.0](https://github.com/lyswhut/lx-music-desktop/compare/v0.9.1...v0.10.0) - 2019-11-02
 
 #### 优化
 
@@ -1784,13 +1866,13 @@ https://github.com/lyswhut/lx-music-mobile#readme
 - 修复酷我源**搜索提示**、**排行榜**无法获取的问题
 - 修复咪咕源无法播放的问题
 
-## [0.9.1](https://github.com/lyswhut/ikun-music-desktop/compare/v0.9.0...v0.9.1) - 2019-10-27
+## [0.9.1](https://github.com/lyswhut/lx-music-desktop/compare/v0.9.0...v0.9.1) - 2019-10-27
 
 #### 修复
 
 - 修复没有配置文件时程序启动出错的问题
 
-## [0.9.0](https://github.com/lyswhut/ikun-music-desktop/compare/v0.8.2...v0.9.0) - 2019-10-27
+## [0.9.0](https://github.com/lyswhut/lx-music-desktop/compare/v0.8.2...v0.9.0) - 2019-10-27
 
 #### 新增
 
@@ -1802,19 +1884,19 @@ https://github.com/lyswhut/lx-music-mobile#readme
 - 修复搜索提示失效的问题
 - 修复从歌单或列表点击搜索按钮搜索目标歌曲时，搜索框未聚焦仍然弹出候选搜索列表的问题
 
-## [0.8.2](https://github.com/lyswhut/ikun-music-desktop/compare/v0.8.1...v0.8.2) - 2019-10-20
+## [0.8.2](https://github.com/lyswhut/lx-music-desktop/compare/v0.8.1...v0.8.2) - 2019-10-20
 
 #### 修复
 
 - 兼容旧版酷我源搜索列表过滤128k音质的bug（注：0.8.1版本仅修复了酷我源的歌曲过滤问题，该修复仅对以后添加的歌曲有效，如果是之前添加的歌曲仍会出现这个问题，现修复对之前旧列表数据的兼容处理）
 
-## [0.8.1](https://github.com/lyswhut/ikun-music-desktop/compare/v0.8.0...v0.8.1) - 2019-10-20
+## [0.8.1](https://github.com/lyswhut/lx-music-desktop/compare/v0.8.0...v0.8.1) - 2019-10-20
 
 #### 修复
 
 - 修复酷我源搜索歌曲结果未添加128k音质导致播放128k音质时显示“该歌曲没有可播放的音频”的问题
 
-## [0.8.0](https://github.com/lyswhut/ikun-music-desktop/compare/v0.7.0...v0.8.0) - 2019-10-19
+## [0.8.0](https://github.com/lyswhut/lx-music-desktop/compare/v0.7.0...v0.8.0) - 2019-10-19
 
 #### 新增
 
@@ -1837,7 +1919,7 @@ https://github.com/lyswhut/lx-music-mobile#readme
 - 修复歌曲音质不存在时仍然播放或下载的Bug
 - 修复调整音量时，调整的位置与鼠标点击的位置不一致的问题
 
-## [0.7.0](https://github.com/lyswhut/ikun-music-desktop/compare/v0.6.2...v0.7.0) - 2019-10-07
+## [0.7.0](https://github.com/lyswhut/lx-music-desktop/compare/v0.6.2...v0.7.0) - 2019-10-07
 
 #### 新增
 
@@ -1859,7 +1941,7 @@ https://github.com/lyswhut/lx-music-mobile#readme
 - 修复列表延迟显示的Bug
 - 修复QQ音源128k音质试听
 
-## [0.6.2](https://github.com/lyswhut/ikun-music-desktop/compare/v0.6.1...v0.6.2) - 2019-10-01
+## [0.6.2](https://github.com/lyswhut/lx-music-desktop/compare/v0.6.1...v0.6.2) - 2019-10-01
 
 祝贺祖国成立70周年~！
 
@@ -1874,7 +1956,7 @@ https://github.com/lyswhut/lx-music-mobile#readme
 - 修复百度源搜索结果为空时的接口处理Bug
 - 恢复**酷狗**其他音质播放
 
-## [0.6.1](https://github.com/lyswhut/ikun-music-desktop/compare/v0.6.0...v0.6.1) - 2019-09-28
+## [0.6.1](https://github.com/lyswhut/lx-music-desktop/compare/v0.6.0...v0.6.1) - 2019-09-28
 
 ### 新增
 
@@ -1898,7 +1980,7 @@ https://github.com/lyswhut/lx-music-mobile#readme
 - 移除 `192k` 音质
 - 移除酷我音源 `ape` 音质，无损推荐 `flac` 格式
 
-## [0.6.0](https://github.com/lyswhut/ikun-music-desktop/compare/v0.5.5...v0.6.0) - 2019-09-21
+## [0.6.0](https://github.com/lyswhut/lx-music-desktop/compare/v0.5.5...v0.6.0) - 2019-09-21
 
 ### 新增
 
@@ -1914,7 +1996,7 @@ https://github.com/lyswhut/lx-music-mobile#readme
 - 修复试听列表没有歌曲时会显示列表加载中的Bug
 - 修复切换歌单列表详情时的UI Bug
 
-## [0.5.5](https://github.com/lyswhut/ikun-music-desktop/compare/v0.5.4...v0.5.5) - 2019-09-13
+## [0.5.5](https://github.com/lyswhut/lx-music-desktop/compare/v0.5.4...v0.5.5) - 2019-09-13
 
 ### 新增
 
@@ -1928,7 +2010,7 @@ https://github.com/lyswhut/lx-music-mobile#readme
 - 修复下载的歌曲文件名中包含命名规则不允许的符号时下载失败的问题（若歌曲名包含这些符号会自动将其移除）
 - 修复 MAC 版本不能复制粘贴的问题
 
-## [0.5.4](https://github.com/lyswhut/ikun-music-desktop/compare/v0.5.3...v0.5.4) - 2019-09-09
+## [0.5.4](https://github.com/lyswhut/lx-music-desktop/compare/v0.5.3...v0.5.4) - 2019-09-09
 
 ### 移除
 
@@ -1936,7 +2018,7 @@ https://github.com/lyswhut/lx-music-mobile#readme
 - 为了稳妥起见，暂时移除FLAC格式的meta信息修改
 - MP3格式无此问题
 
-## [0.5.3](https://github.com/lyswhut/ikun-music-desktop/compare/v0.5.2...v0.5.3) - 2019-09-09
+## [0.5.3](https://github.com/lyswhut/lx-music-desktop/compare/v0.5.2...v0.5.3) - 2019-09-09
 
 ### 优化
 
@@ -1946,7 +2028,7 @@ https://github.com/lyswhut/lx-music-mobile#readme
 
 - 修复试听酷狗源的音乐仍然获取320k音质导致获取失败的Bug
 
-## [0.5.2](https://github.com/lyswhut/ikun-music-desktop/compare/v0.5.1...v0.5.2) - 2019-09-09
+## [0.5.2](https://github.com/lyswhut/lx-music-desktop/compare/v0.5.1...v0.5.2) - 2019-09-09
 
 ### 新增
 
@@ -1967,7 +2049,7 @@ https://github.com/lyswhut/lx-music-mobile#readme
 
 - 因接口失效，移除网易云音源，酷狗音源仅支持播放128k音质
 
-## [0.5.1](https://github.com/lyswhut/ikun-music-desktop/compare/v0.5.0...v0.5.1) - 2019-09-05
+## [0.5.1](https://github.com/lyswhut/lx-music-desktop/compare/v0.5.0...v0.5.1) - 2019-09-05
 
 ### 新增
 
@@ -1979,7 +2061,7 @@ https://github.com/lyswhut/lx-music-mobile#readme
 - 修复百度源歌单全部分类无法加载的问题
 - 修复更新弹窗无法弹出的问题
 
-## [0.5.0](https://github.com/lyswhut/ikun-music-desktop/compare/v0.4.0...v0.5.0) - 2019-09-05
+## [0.5.0](https://github.com/lyswhut/lx-music-desktop/compare/v0.4.0...v0.5.0) - 2019-09-05
 
 ### 新增
 
@@ -1998,7 +2080,8 @@ https://github.com/lyswhut/lx-music-mobile#readme
 - 修复版本更新弹窗Bug
 - 修复酷狗歌单推荐歌单出现在其他分类中的Bug
 
-## [0.4.0](https://github.com/lyswhut/ikun-music-desktop/compare/v0.3.5...v0.4.0) - 2019-09-04
+## [0.4.0](https://github.com/lyswhut/lx-music-desktop/compare/v0.3.5...v0.4.0) - 2019-09-04
+
 
 ### 新增
 
@@ -2011,7 +2094,7 @@ https://github.com/lyswhut/lx-music-mobile#readme
 
 - **注意**：0.4.0以前的版本即将失效，请更新到0.4.0版本
 
-## [0.3.5](https://github.com/lyswhut/ikun-music-desktop/compare/v0.3.4...v0.3.5) - 2019-08-30
+## [0.3.5](https://github.com/lyswhut/lx-music-desktop/compare/v0.3.4...v0.3.5) - 2019-08-30
 
 ### 新增
 
@@ -2026,7 +2109,7 @@ https://github.com/lyswhut/lx-music-mobile#readme
 - 修复使用临时接口时在试听列表双击灰色歌曲仍然会进行播放的Bug
 - 修复歌词加载Bug
 
-## [0.3.4](https://github.com/lyswhut/ikun-music-desktop/compare/v0.3.3...v0.3.4) - 2019-08-29
+## [0.3.4](https://github.com/lyswhut/lx-music-desktop/compare/v0.3.3...v0.3.4) - 2019-08-29
 
 ### 优化
 
@@ -2036,7 +2119,7 @@ https://github.com/lyswhut/lx-music-mobile#readme
 
 - 修复播放过程中URL过期不会刷新URL的问题
 
-## [0.3.3](https://github.com/lyswhut/ikun-music-desktop/compare/v0.3.2...v0.3.3) - 2019-08-29
+## [0.3.3](https://github.com/lyswhut/lx-music-desktop/compare/v0.3.2...v0.3.3) - 2019-08-29
 
 ### 修复
 
@@ -2045,19 +2128,20 @@ https://github.com/lyswhut/lx-music-mobile#readme
 - 修复手动定位播放进度条时存在偏差的问题
 - 屏蔽播放器中没有歌曲时对进度条的点击
 
-## [0.3.2](https://github.com/lyswhut/ikun-music-desktop/compare/v0.3.1...v0.3.2) - 2019-08-24
+
+## [0.3.2](https://github.com/lyswhut/lx-music-desktop/compare/v0.3.1...v0.3.2) - 2019-08-24
 
 ### 新增
 
 - 新增酷狗排行榜其他音质下载
 
-## [0.3.1](https://github.com/lyswhut/ikun-music-desktop/compare/v0.3.0...v0.3.1) - 2019-08-24
+## [0.3.1](https://github.com/lyswhut/lx-music-desktop/compare/v0.3.0...v0.3.1) - 2019-08-24
 
 ### 修复
 
 - 修复音量条主题适配
 
-## [0.3.0](https://github.com/lyswhut/ikun-music-desktop/compare/v0.2.3...v0.3.0) - 2019-08-24
+## [0.3.0](https://github.com/lyswhut/lx-music-desktop/compare/v0.2.3...v0.3.0) - 2019-08-24
 
 ### 新增
 
@@ -2071,7 +2155,7 @@ https://github.com/lyswhut/lx-music-mobile#readme
 
 - 强制把临时接口设置回 `messoer` 接口
 
-## [0.2.3](https://github.com/lyswhut/ikun-music-desktop/compare/v0.2.2...v0.2.3) - 2019-08-22
+## [0.2.3](https://github.com/lyswhut/lx-music-desktop/compare/v0.2.2...v0.2.3) - 2019-08-22
 
 ### 新增
 
@@ -2087,14 +2171,14 @@ https://github.com/lyswhut/lx-music-mobile#readme
 - 移除临时接口（因服务器被攻击，本接口已关闭）
 - 移除列表栏设置的隐藏专辑栏选项（感觉这个设置并没有什么luan用，并且还会打破布局）
 
-## [0.2.2](https://github.com/lyswhut/ikun-music-desktop/compare/v0.2.1...v0.2.2) - 2019-08-21
+## [0.2.2](https://github.com/lyswhut/lx-music-desktop/compare/v0.2.1...v0.2.2) - 2019-08-21
 
 ### 修复
 
 - 修复下载过程中出错重试5次都失败后不会自动开始下一个任务的Bug
 - 修复播放到一半URL过期时不会刷新URL直接播放下一首的问题
 
-## [0.2.1](https://github.com/lyswhut/ikun-music-desktop/compare/v0.2.0...v0.2.1) - 2019-08-20
+## [0.2.1](https://github.com/lyswhut/lx-music-desktop/compare/v0.2.0...v0.2.1) - 2019-08-20
 
 ### 优化
 
@@ -2105,7 +2189,7 @@ https://github.com/lyswhut/lx-music-mobile#readme
 - 修复歌曲加载无法加载时自动切换混乱的Bug
 - 修复移除列表最后一首歌曲时播放器不停止播放的问题
 
-## [0.2.0](https://github.com/lyswhut/ikun-music-desktop/compare/v0.1.6...v0.2.0) - 2019-08-20
+## [0.2.0](https://github.com/lyswhut/lx-music-desktop/compare/v0.1.6...v0.2.0) - 2019-08-20
 
 ### 新增
 
@@ -2118,13 +2202,13 @@ https://github.com/lyswhut/lx-music-mobile#readme
 - 修复更新弹窗历史版本描述多余的换行问题
 - 修复歌曲无法播放的情况下歌词仍会播放的问题
 
-## [0.1.6](https://github.com/lyswhut/ikun-music-desktop/compare/v0.1.5...v0.1.6) - 2019-08-19
+## [0.1.6](https://github.com/lyswhut/lx-music-desktop/compare/v0.1.5...v0.1.6) - 2019-08-19
 
 ### 修复
 
 - 修复列表多选音源限制Bug
 
-## [0.1.5](https://github.com/lyswhut/ikun-music-desktop/compare/v0.1.4...v0.1.5) - 2019-08-19
+## [0.1.5](https://github.com/lyswhut/lx-music-desktop/compare/v0.1.4...v0.1.5) - 2019-08-19
 
 ### 新增
 
@@ -2137,13 +2221,13 @@ https://github.com/lyswhut/lx-music-mobile#readme
 
 - 优化歌曲切换机制
 
-## [0.1.4](https://github.com/lyswhut/ikun-music-desktop/compare/v0.1.3...v0.1.4) - 2019-08-18
+## [0.1.4](https://github.com/lyswhut/lx-music-desktop/compare/v0.1.3...v0.1.4) - 2019-08-18
 
 ### 新增
 
 - 新增音乐来源切换，可到设置页面-基本设置 look look !
 - 为搜索结果列表添加多选功能。
-  P.S：暂时没想好多选后的操作按钮放哪...
+P.S：暂时没想好多选后的操作按钮放哪...
 
 ### 优化
 
@@ -2151,7 +2235,7 @@ https://github.com/lyswhut/lx-music-mobile#readme
 - 完善上一个版本的http请求封装并切换部分请求到该方法上
 - 优化其他一些细节
 
-## [0.1.3](https://github.com/lyswhut/ikun-music-desktop/compare/v0.1.2...v0.1.3) - 2019-08-17
+## [0.1.3](https://github.com/lyswhut/lx-music-desktop/compare/v0.1.2...v0.1.3) - 2019-08-17
 
 ### 新增
 
@@ -2166,13 +2250,13 @@ https://github.com/lyswhut/lx-music-mobile#readme
 
 - 由于messoer接口无法使用，QQ音乐排行榜直接播放/下载功能暂时关闭
 
-## [0.1.2](https://github.com/lyswhut/ikun-music-desktop/compare/v0.1.1...v0.1.2) - 2019-08-17
+## [0.1.2](https://github.com/lyswhut/lx-music-desktop/compare/v0.1.1...v0.1.2) - 2019-08-17
 
 ### 修复
 
 - 修复更新弹窗的内容显示问题
 
-## [0.1.1](https://github.com/lyswhut/ikun-music-desktop/compare/v0.1.0...v0.1.1) - 2019-08-17
+## [0.1.1](https://github.com/lyswhut/lx-music-desktop/compare/v0.1.0...v0.1.1) - 2019-08-17
 
 ### 新增
 
@@ -2190,4 +2274,4 @@ https://github.com/lyswhut/lx-music-mobile#readme
 
 ## [0.1.0] - 2019-8-16
 
-- 0.1.0版本发布
+* 0.1.0版本发布

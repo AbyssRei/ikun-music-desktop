@@ -253,7 +253,7 @@ const parseTools = {
 //   return requestObj
 // }
 
-// https://github.com/ikunshare/lx-music-mobile/issues/370
+// https://github.com/lyswhut/lx-music-mobile/issues/370
 const fixTimeLabel = (lrc: any, tlrc: any, romalrc: any) => {
   if (lrc) {
     let newLrc = lrc.replace(/\[(\d{2}:\d{2}):(\d{2})]/g, '[$1.$2]')

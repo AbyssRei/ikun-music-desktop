@@ -9,8 +9,8 @@ const afterPack = require('./build-after-pack')
 * @see https://www.electron.build/configuration/configuration
 */
 const options = {
-  appId: 'com.ikunshare.music.desktop',
-  productName: 'ikun-music-desktop',
+  appId: 'cn.toside.music.desktop',
+  productName: 'lx-music-desktop',
   beforePack,
   afterPack,
   protocols: {
@@ -46,8 +46,8 @@ const options = {
   publish: [
     {
       provider: 'github',
-      owner: 'ikunshare',
-      repo: 'ikun-music-desktop',
+      owner: 'lyswhut',
+      repo: 'lx-music-desktop',
     },
   ],
 }
@@ -58,7 +58,7 @@ const options = {
 const winOptions = {
   win: {
     icon: './resources/icons/icon.ico',
-    legalTrademarks: 'ikunshare',
+    legalTrademarks: 'lyswhut',
     // artifactName: '${productName}-v${version}-${env.ARCH}-${env.TARGET}.${ext}',
   },
   nsis: {
@@ -67,7 +67,7 @@ const winOptions = {
     allowToChangeInstallationDirectory: true,
     // differentialPackage: true,
     license: './licenses/license.rtf',
-    shortcutName: 'IKUN Music',
+    shortcutName: 'LX Music',
   },
 }
 /**
@@ -76,7 +76,7 @@ const winOptions = {
  */
 const linuxOptions = {
   linux: {
-    maintainer: 'ikunshare <ikunshare@qq.com>',
+    maintainer: 'lyswhut <lyswhut@qq.com>',
     // artifactName: '${productName}-${version}.${env.ARCH}.${ext}',
     icon: './resources/icons',
     category: 'Utility;AudioVideo;Audio;Player;Music;',
@@ -86,9 +86,9 @@ const linuxOptions = {
       // https://specifications.freedesktop.org/desktop-entry-spec/latest/example.html
       // https://developer.gnome.org/documentation/guidelines/maintainer/integrating.html#desktop-files
       entry: {
-        Name: 'IKUN Music',
-        'Name[zh_CN]': 'IKUN Music',
-        'Name[zh_TW]': 'IKUN Music',
+        Name: 'LX Music',
+        'Name[zh_CN]': 'LX Music',
+        'Name[zh_TW]': 'LX Music',
         Encoding: 'UTF-8',
         MimeType: 'x-scheme-handler/lxmusic',
         StartupNotify: 'false',
@@ -127,7 +127,7 @@ const macOptions = {
         path: '/Applications',
       },
     ],
-    title: 'IKUN Music v${version}',
+    title: 'LX Music v${version}',
   },
 }
 

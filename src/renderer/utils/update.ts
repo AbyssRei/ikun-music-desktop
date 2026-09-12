@@ -6,40 +6,40 @@ import pkg from '../../../package.json'
 const author = pkg.author.name
 const name = pkg.name
 
-const address: [string, string][] = [
+const address = [
   [`https://raw.githubusercontent.com/${author}/${name}/master/publish/version.json`, 'direct'],
-  [`https://raw.dgithub.xyz/${author}/${name}/master/publish/version.json`, 'direct'],
+  ['https://registry.npmjs.org/lx-music-desktop-version-info/latest', 'npm'],
+  [`https://cdn.jsdelivr.net/gh/${author}/${name}/publish/version.json`, 'direct'],
   [`https://fastly.jsdelivr.net/gh/${author}/${name}/publish/version.json`, 'direct'],
   [`https://gcore.jsdelivr.net/gh/${author}/${name}/publish/version.json`, 'direct'],
+  ['https://registry.npmmirror.com/lx-music-desktop-version-info/latest', 'npm'],
+  ['https://gitee.com/lyswhut/lx-music-desktop-versions/raw/master/version.json', 'direct'],
+  ['http://cdn.stsky.cn/lx-music/desktop/version.json', 'direct'],
 ]
 
-const request = async (url: string, retryNum = 0): Promise<any> => {
+const request = async(url, retryNum = 0) => {
   return new Promise((resolve, reject) => {
-    httpGet(
-      url,
-      {
-        timeout: 10000,
-      },
-      (err: Error | null, resp: any, body: any) => {
-        if (err || resp.statusCode != 200) {
-          ++retryNum >= 3
-            ? reject(err || new Error(resp.statusMessage || resp.statusCode))
-            : request(url, retryNum).then(resolve).catch(reject)
-        } else resolve(body)
-      }
-    )
+    httpGet(url, {
+      timeout: 10000,
+    }, (err, resp, body) => {
+      if (err || resp.statusCode != 200) {
+        ++retryNum >= 3
+          ? reject(err || new Error(resp.statusMessage || resp.statusCode))
+          : request(url, retryNum).then(resolve).catch(reject)
+      } else resolve(body)
+    })
   })
 }
 
-const getDirectInfo = async (url: string) => {
-  return request(url).then((info: any) => {
+const getDirectInfo = async(url) => {
+  return request(url).then(info => {
     if (info.version == null) throw new Error('failed')
     return info
   })
 }
 
-const getNpmPkgInfo = async (url: string) => {
-  return request(url).then((json: any) => {
+const getNpmPkgInfo = async(url) => {
+  return request(url).then(json => {
     if (!json.versionInfo) throw new Error('failed')
     const info = JSON.parse(json.versionInfo)
     if (info.version == null) throw new Error('failed')
@@ -47,7 +47,7 @@ const getNpmPkgInfo = async (url: string) => {
   })
 }
 
-export const getVersionInfo = async (index = 0): Promise<any> => {
+export const getVersionInfo = async(index = 0) => {
   const [url, source] = address[index]
   let promise
   switch (source) {
@@ -59,7 +59,7 @@ export const getVersionInfo = async (index = 0): Promise<any> => {
       break
   }
 
-  return promise!.catch(async (err) => {
+  return promise.catch(async(err) => {
     index++
     if (index >= address.length) throw err
     return getVersionInfo(index)

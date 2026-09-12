@@ -1,6 +1,6 @@
 {
-  "name": "ikun-music-desktop",
-  "version": "3.3.0-fix.7",
+  "name": "lx-music-desktop",
+  "version": "2.12.4",
   "description": "一个免费的音乐查找助手",
   "main": "./dist/main.js",
   "scripts": {
@@ -77,21 +77,21 @@
   },
   "macLanguagesInfoPlistStrings": {
     "en": {
-      "CFBundleDisplayName": "IKUN Music",
-      "CFBundleName": "IKUN Music"
+      "CFBundleDisplayName": "LX Music",
+      "CFBundleName": "LX Music"
     },
     "zh_CN": {
-      "CFBundleDisplayName": "IKUN Music",
-      "CFBundleName": "IKUN Music"
+      "CFBundleDisplayName": "LX Music",
+      "CFBundleName": "LX Music"
     },
     "zh_TW": {
-      "CFBundleDisplayName": "IKUN Music",
-      "CFBundleName": "IKUN Music"
+      "CFBundleDisplayName": "LX Music",
+      "CFBundleName": "LX Music"
     }
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ikunshare/ikun-music-desktop.git"
+    "url": "git+https://github.com/lyswhut/lx-music-desktop.git"
   },
   "keywords": [
     "music-player",
@@ -99,14 +99,14 @@
     "vuejs3"
   ],
   "author": {
-    "name": "ikunshare",
-    "email": "ikun0014@qq.com"
+    "name": "lyswhut",
+    "email": "lyswhut@qq.com"
   },
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/ikunshare/ikun-music-desktop/issues"
+    "url": "https://github.com/lyswhut/lx-music-desktop/issues"
   },
-  "homepage": "https://github.com/ikunshare/ikun-music-desktop#readme",
+  "homepage": "https://github.com/lyswhut/lx-music-desktop#readme",
   "devDependencies": {
     "@tsconfig/recommended": "^1.0.13",
     "@types/better-sqlite3": "^7.6.13",
